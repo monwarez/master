@@ -1,0 +1,104 @@
+%% Preambule.tex	set all extension will used
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{soul}
+\usepackage{ulem}
+\usepackage[Bjornstrup]{fncychap}
+\usepackage{fancyhdr}
+\usepackage{shorttoc}
+\usepackage{tikz}
+\usepackage{bookmark}
+\usepackage{epsfig}
+\usepackage{pst-grad}
+\usepackage{pst-plot}
+\usepackage[francais]{babel} %% babel last except for listings and hyperref
+\usepackage{listings}
+\usepackage{hyperref}
+
+\setlength{\headheight}{14.2pt}
+
+\newtheorem{theorem}{Th\'{e}or\`{e}me}[section]
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollaire}
+
+\newenvironment{proof}[1][Preuve]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][D\'efinition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Exemple]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remarque]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+%%	for roman numerotation
+%%\renewcommand{\thechapter}{\Roman{chapter}}
+
+%%	style front
+\fancypagestyle{front}{%
+	\fancyhf{}
+	\fancyfoot[C]{page \thepage}%
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{footrulewidth}{0.4pt}
+	}
+%% style main
+\fancypagestyle{main}{
+	\fancyhf{}
+	\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ ##1} {}}
+	\renewcommand{\sectionmark}[1]{\markright{\thesection\ ##1}}
+	\fancyhead[c]{}
+	\fancyhead[RO,LE]{\rightmark}
+	\fancyhead[LO,RE]{\leftmark}
+	\fancyfoot[C]{}
+	\fancyfoot[RO,LE]{page \thepage}
+	\fancyfoot[LO,RE]{Algèbre V}
+	}
+%% integer segment
+\def\segN#1#2{{[\![#1,#2]\!]}}
+%% some usefull macro
+\def\ord{{\text{ord\,}}}
+\def\pgcd#1#2{{\text{pgcd}(#1,#2)\,}}
+\def\ppcm#1#2{{ \text{ppcm} (#1,#2)\,}}
+\def\Int{{\text{Int\,}}}
+\def\Aut{{\text{Auti\,}}}
+\def\im{{\text{Im\,}}}
+\def\Id{{\text{Id\,}}}
+\def\psShapeTwoPtC#1#2#3#4#5#6{{ \psline[linecolor=#1, linewidth=0.02, arrowsize=0.052917cm 2.0, arrowlength= 1.4, arrowinset=0.0]{#2}(#3,#4)(#5,#6) }} 
+\def\psShapeTwoPt#1#2#3#4#5{{ \psShapeTwoPtC{black}{#1}{#2}{#3}{#4}{#5} }}
+\def\psArrow#1#2#3#4{{ \psShapeTwoPt{->}{#1}{#2}{#3}{#4} }}
+\def\diagNoether#1#2#3#4#5#6#7#8{{
+	\begin{pspicture}(0,0)(5.5,3.5)
+		%we have to do a mapsto
+		\psShapeTwoPt{-}{0.9}{2.25}{1.1}{2.25}
+  		\psArrow{1}{2.25}{1}{1}
+  		\psArrow{2.5}{2.25}{2.5}{1}
+  		\psArrow{2.75}{2.5}{4.25}{2.5}
+   		\psArrow{2.75}{1}{4.25}{2.25}
+               
+		\rput(1,2.5){#7}
+		\rput(1,0.5){#8}
+
+		\rput(2.5,2.5){#1}
+		\rput(2.75,0.5){#2}
+		\rput(4.75,2.5){#3}
+
+		\rput(2.25,1.75){#4}
+		\rput(4,1.25){#5}
+		\rput(3.5,2.75){#6}
+   	\end{pspicture}
+}}
+\def\ProdSemDR#1{{\underset{#1}{\rtimes}}}
+\def\Set#1{{\mathds{#1}}}
+\def\Mat{{\text{Mat\,}}}
+\def\sev{{ \underset{\text{ss-ev}}{\subset}}}
+\def\sgr{{ \underset{\text{ss-grp}}{\subset}}}

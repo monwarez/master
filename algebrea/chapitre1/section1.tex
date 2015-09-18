@@ -1,0 +1,47 @@
+\section{Introduction aux groupes libres. Le groupe $\Set{Z}$}
+	$(\Set{Z} , +)$ est un groupe
+	\begin{proposition}
+		Soit $G$ un groupe quelconque et $g$ dans $G$. Alors il existe un unique morphisme de groupes de $\Set{Z}$ dans $G$ qui envoie $1$ sur $g$
+	\end{proposition}
+	Id\'{e}e : $1$ joue le r\^{o}le d'une base.
+	\begin{proof}
+		Soit $\varphi : (\Set{Z}, +) \rightarrow (G, \cdot) , 1 \mapsto g$ \newline
+		\fbox{Analyse}	$1+1 = 2 \mapsto g \cdot g = g^2$ \, car $\varphi(1+1) = \varphi(1) \cdot \varphi(1)$. \newline
+		De m\^{e}me $n \mapsto g^n , \forall n > 0$ et $0 \mapsto e $ car l'image d'un neutre pour un morphisme est un neutre. \newline
+		$-1 \mapsto g^{-1}$ car l'image de l'inverse est l'inverse de l'image , $-n \mapsto g^{-n}, \forall n > 0$.	\newline
+		\fbox{Synth\`{e}se} On pose $\varphi(n) = g^n, \forall n \in \Set{Z}$ , on a bien $\varphi(1) = g$ , $\varphi(n+m) = g^{n+m} = g^n \cdot g^m 
+		= \varphi(n) \cdot \varphi(m)$. \newline
+		Donc $\varphi$ existe et son unicit\'{e} provient de la partie "analyse".
+	\end{proof}
+	\begin{definition}
+		Le groupe $G$ est dit monog\`ene s'il est engendr\'e par un seul g\'en\'erateur $g$. \newline i.e $G = \{ g^n , n \in \Set{Z} \}$
+	\end{definition}
+	\begin{remark}
+		Dans ce cas, on peut trouver un unique morphisme $\varphi$ tel que $\varphi(1) = g, \varphi : \Set{Z} \rightarrow G$ , ce morphisme est alors surjectif. 
+	\end{remark}
+	\begin{proof}
+		$\varphi(1) = g$ donc $\varphi(n) = g^n , \forall n \in \Set{Z}$ soit $h \in G$, par d\'efinition on a $h = g^n$ pour un $n \in \Set{Z}$. \newline
+		Donc $\varphi(n) = h$. 
+		On a donc $\varphi$ surjectif
+	\end{proof}
+	Le morphisme $\varphi$ est-il injectif ? $\ker \varphi$ permet de r\'epondre. $\ker \varphi \sgr \Set{Z}$ donc $\ker \varphi = n\Set{Z}$.
+	\begin{proposition}
+		Soit $G$ un groupe monog\`ene, alors soit:
+		\begin{enumerate}[(i)]
+			\item	$G \simeq \Set{Z}$
+			\item	$G \simeq \Set{Z} / n\Set{Z} , n > 0$
+		\end{enumerate}
+	\end{proposition}
+	\begin{definition}
+		Dans le second cas, le groupe est dit cyclique
+	\end{definition}
+	\begin{proof}
+		On a vu que $\varphi : \Set{Z} \rightarrow G$ est surjective \newline
+		Si $\ker \varphi = 0$ alors $\varphi$ est injective ,$\varphi$ est un isomorphisme et on est dans le cas \textit{(i)}. \newline
+		Si $\ker \varphi \ne 0$ alors $\ker \varphi = n\Set{Z}$ \newline
+		\fbox{Passage au quotient} \newline
+		\fbox{Principe 1} Si $\varphi : G \rightarrow H$ est un morphisme, alors il d\'efinit un "isomorphisme canonique"
+		\[ G/ \ker \varphi \simeq \im \varphi \]
+		On obtient le diagramme commutatif suivant:
+		
+	\end{proof}	

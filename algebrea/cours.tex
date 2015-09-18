@@ -1,0 +1,18 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\input{../preambule/preambule}
+\begin{document}
+	\frontmatter
+	\thispagestyle{front}
+	\input{frontpage/titlepage}
+	\shorttableofcontents{Sommaire}{0}
+	\addcontentsline{toc}{chapter}{Sommaire}
+	
+	\mainmatter
+	\thispagestyle{main}
+	\input{chapitre1/chapitre1}
+	\cleardoublepage
+	\backmatter
+	\tableofcontents
+	\addcontentsline{toc}{chapter}{Table des mati\`{e}res}
+
+\end{document}

@@ -1,0 +1,19 @@
+\chapter{Groupes libres et pr\'{e}sentations}
+	Notion clef du M1 d'alg\`{e}bre :\textit{le quotient}, le passage au quotient , les applications \textit{bien d\'{e}finies}.
+	\fbox{Contre-exemple}: On considère 
+	\[ u : \Set{R}^2 \rightarrow \Set{R}^3 , xe + yf + zg \mapsto (x,y,z) \]
+	Avec : \[ e = (1,0) \  f = (0,1) \  g = (1,1) \  x,y,z \in \Set{R} \]
+	Ce n'est pas \textit{bien défini}, en effet on peut assoscier à $(0,0)$ le vecteur $(0,0,0)$ mais aussi le vecteur $(-1,-1,1)$.
+	Dans un e.v de dimension finie, on sait qu'il existe des bases.
+	\begin{theorem}
+		Soit $\mathscr{B} = (e_i)_{1 \le i \le n}$ une base d'un e.v $E$. Soit $F$ un e.v et $f_1,\cdots,f_n$ des vecteurs de $F$. \newline
+		Alors $\exists ! \varphi \in \mathscr{L}(E,F)$ tel que $\varphi(e_i) = f_i , \forall i \in \segN{1}{n}$
+	\end{theorem}
+	\begin{remark}
+		Dans l'exemple pr\'{e}c\'{e}dant, l'application $\varphi \in \mathscr{L}(\Set{R}^2,\Set{R}^3)$ tel que 
+		\[ \varphi(e) = (1,0,0) \ , \varphi(f) = (0,1,0) \ , \varphi(g) = (0,0,1) \]
+		n'existe pas car $(e,f,g)$ n'est pas une base. Pour les groupes, il n'y a en g\'{e}n\'{e}ral pas de bases. \newline
+		\fbox{But de la le\c{c}on} Remplacer le th\'{e}or\`{e}me sur les bases par un th\'{e}or\`{e}me adapt\'{e}. Introduire les groupes
+		libres (un groupe o\`{u} il existe une famille libre et g\'{e}n\'{e}ratrice).
+    \end{remark} 
+	\input{chapitre1/section1.tex}
